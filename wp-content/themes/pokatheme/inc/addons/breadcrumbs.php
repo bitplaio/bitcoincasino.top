@@ -32,10 +32,6 @@ if ( !function_exists( 'poka_breadcrumbs' ) ) {
 		// Open the breadcrumbs
 		$html = '<div id="' . esc_attr( $args['breadcrumbs_id'] ) . '" class="' . esc_attr( $args['breadcrumbs_classes']) . '">';
 
-		// Add Homepage link & separator (always present)
-		$html .= '<span class="item-home"><a class="bread-link bread-home" href="' . get_home_url() . '" title="' . esc_attr( $args['home_title'] ) . '">' . esc_attr( $args['home_title'] ) . '</a></span>';
-		$html .= $separator;
-
 		// Post
 		if ( is_singular( 'post' ) ) {
 
