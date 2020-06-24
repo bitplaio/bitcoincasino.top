@@ -1,0 +1,87 @@
+@media all and (-ms-high-contrast:none)
+{
+    .carousel {
+
+        .owl-item {
+            .aff-single-widget {
+                align-items: center;
+            }
+
+        }
+    }
+
+    .table-s1 {
+
+        .item {
+            .c4 {
+                .icon-poka {
+                    margin-top: -45px;
+                }
+            }
+        }
+        .c2 {
+
+            a {
+                img {
+                    width: 100%;
+                    max-width: 222px;
+
+                    @media only screen and (max-width: 767px) {
+                        width: 250px;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .table-s1 .item:hover .c2 a {
+        @include transform(none);
+    }
+
+    .aff-single-widget .item-btns {
+        width: 100%;
+    }
+
+    .carousel.owl-carousel .owl-item img {
+        width: 200px;
+    }
+
+    .taxonomy-list-dif .aff-single-widget {
+        align-items: center;
+
+    }
+
+    .table-s1.table-big .item .c4 .icon-poka { margin-top: -55px; }
+
+    .aff-single-widget-xl .widget-text .icon-poka { margin-top: -55px; }
+
+    .casino-guides .casino-guide-box .text .btn .icon-poka { height: 15px; top: 4px;}
+
+    .btn--read-more .icon-poka { height: 15px; }
+
+    .group-category .news-item .new-text-group .read-more .icon-poka { height: 15px; }
+
+    .review-bottom-group .btn .poka-icon , .review-up-area .review-logo-group .btn .poka-icon{ position: relative; top: 4px; }
+
+    /* clears the 'X' from Internet Explorer */
+    input::-ms-clear {  display: none; width : 0; height: 0; }
+    input::-ms-reveal {  display: none; width : 0; height: 0; }
+
+    .table-s1 .item .c5 .table-cell , .table-s1 .item .c2 .table-cell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+
+        >div {
+            width: 100%;
+        }
+    }
+
+    .home .fullscreen-bg {
+        background-attachment: inherit;
+        background-size: contain;
+    }
+}

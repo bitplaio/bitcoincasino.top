@@ -1,0 +1,115 @@
+/* ========================================================== */
+/* 			                 FOOTER                           */
+/* ========================================================== */
+.footer {
+    background: $black-medium;
+    padding-top: 70px;
+    overflow-x: hidden;
+    .footer-copyright {
+        background: rgba(0,0,0,0.3);
+        padding: 22px 0;
+        min-height: 50px;
+        p {
+            @include font-size(12px);
+            color: #fff;
+        }
+    }
+    .btn-backToTop {
+        position: absolute;
+        margin-top: -18px;
+        top: 50%;
+        right: 15px;
+        background: rgba(255,255,255,0.2);
+        @include vendor(border-radius, 5px);
+        color: #fff;
+        width: 40px;
+        height: 36px;
+        line-height: 30px;
+        display: block;
+        text-align: center;
+        padding: 0;
+
+        i {
+            font-size: 12px;
+            color: white;
+        }
+    }
+    .form-wrapper {
+        input[type="text"] {
+            max-width: 300px;
+        }
+    }
+    .widget-columns {
+        color: #fff;
+        margin:0 -20px 30px;
+        h3 {
+            @include font-size(24px);
+            margin-bottom: 10px;
+        }
+        p {
+            @include font-size(12px);
+            margin-bottom: 10px;
+        }
+        a {
+            color: #fff;
+        }
+        .social-list {
+            li {
+                a {
+                    color: $blue;
+                }
+            }
+        }
+        .menu {
+            li {
+                a {
+                    color: #fff;
+                    &:hover {
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+        &.widget-count-1 {
+            &>div {
+                padding: 0 20px;
+            }
+        }
+        &.widget-count-2 {
+            &>div {
+                float: left;
+                padding: 0 20px;
+                width: 50%;
+                @media (max-width: $sm-max) {
+                    width: 100%;
+                }
+            }
+        }
+        &.widget-count-3 {
+            &>div {
+                float: left;
+                padding: 0 20px;
+                width: 33.33333333%;
+                @media (max-width: $sm-max) {
+                    width: 100%;
+                }
+            }
+        }
+        &.widget-count-4 {
+            &>div {
+                float: left;
+                padding: 0 20px;
+                width: 25%;
+                @media (max-width: $sm-max) {
+                    width: 100%;
+                }
+            }
+        }
+        &.widget-columns {
+            &>div {
+                margin-bottom: 30px;
+            }
+        }
+
+    }
+}

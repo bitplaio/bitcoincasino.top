@@ -1,0 +1,175 @@
+/* ========================================================== */
+/* 			            01. MENU                        */
+/* ========================================================== */
+.trigger-mmenu {
+    overflow: hidden;
+    display: block;
+    color: #fff;
+    padding: 0 12px;
+    line-height: 48px;
+    margin: 0 auto;
+    @include transition('all 700ms ease');
+    .icon {
+        width: 22px;
+        margin-right: 7px;
+        display: inline-block;
+        vertical-align: middle;
+        span {
+            display: block;
+            height: 4px;
+            background: #fff;
+            margin-bottom: 3px;
+            position: relative;
+            @include transition('all 700ms ease');
+        }
+    }
+    span {
+        @include font-size(17px);
+        font-weight: bold;
+    }
+    &:hover, &:focus { text-decoration: none; color: #fff; }
+    &:hover .icon {
+        span:first-child { top: -1px; }
+        span:last-child { top: 1px; }
+    }
+}
+
+.mm-opened .trigger-mmenu {
+    opacity: .5;
+}
+
+.head-menu {
+    background: $black-light;
+    text-align: center;
+    .menu{
+        z-index: 1000;
+        position: relative;
+        >li{
+            margin:0 1rem;
+            @media (max-width: $lg-max) {
+                margin: 0 0.8rem;
+            }
+            display: inline-block;
+            position: relative;
+            &:after {
+                display: block;
+                content: "";
+                height: 3px;
+                position: absolute;
+                bottom: 5px;
+                left: 50%;
+                background: #fff;
+                right: 50%;
+                @include transition('all 400ms ease');
+                opacity: 0;
+            }
+            &:hover {
+                &:after {
+                    bottom: 0;
+                    opacity: 1;
+                    left: 0;
+                    right: 0;
+                }
+                >a {
+                    text-decoration: none;
+                }
+            }
+            a {
+                color: #fff;
+                @include font-size(16px);
+                font-weight: 500;
+                display: block;
+                line-height: 52px;
+                letter-spacing: .5px;
+                @media (max-width: $lg-max) {
+                    @include font-size(14px);
+                }
+                &.sf-with-ul {
+                    &:after {
+                        content:'\0052';
+                        font-family: 'poka';
+                        display: inline-block;
+                        color: #fff;
+                        font-size: 10px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+            ul {
+                position: absolute;
+                top: -15px;
+                left: 100%;
+                background:$black-light;
+                padding:15px 0 0px;
+                width: 200px;
+                display: none;
+                li {
+                    display: block;
+                    position: relative;
+                    margin-bottom: 15px;
+                    padding: 0 15px;
+                    text-align: left;
+                    a {
+                        line-height: 1em;
+                        @include font-size(15px);
+                        &:hover {
+                            opacity: .6;
+                        }
+                    }
+                }
+            }
+            >ul {
+                left: -15px;
+                top: 52px;
+            }
+        }
+    }
+    &.head-menu--s1 {
+        background:rgba($black,0.55);
+        .menu{
+            >li{
+                ul {
+                    background:rgba($black,0.55);
+                }
+            }
+        }
+    }
+    &.head-menu--s3 {
+        text-align: left;
+        @media (max-width: $md-max) {
+            text-align: center;
+        }
+    }
+}
+
+#mobile-menu:not(.mm-menu) {
+   display: none;
+}
+
+.mm-clear::after, .mm-clear::before, .mm-close::after, .mm-close::before {
+    width: 7px;
+    height: 7px;
+}
+
+#breadcrumbs {
+    padding: 20px 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    span {
+        &.separator {
+            padding: 0 4px;
+            opacity: .5;
+
+            .breadcrumb-sep:after {
+                content:'\0053';
+                display: inline-block;
+                font-family: "poka";
+                opacity: .5;
+                font-size: 10px;
+            }
+        }
+        &.item-current {
+            opacity: .5;
+        }
+    }
+}

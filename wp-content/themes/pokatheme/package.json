@@ -1,0 +1,14 @@
+{
+  "name": "Gruntfile",
+  "version": "0.1.1",
+  "author": "Pokatheme",
+  "private": true,
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "^1.1.0",
+    "matchdep": "*"
+  }
+}

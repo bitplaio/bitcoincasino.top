@@ -1,0 +1,15 @@
+/* ==========================================================================
+   RTL styles
+   ========================================================================== */
+.table-s1 .item .c4 .icon-poka { margin-left: 5px; transform: rotate(180deg); }
+.table-s1.table-big .item .c4 .icon-poka{ margin-left: 19px; transform: rotate(180deg); }
+.table-s1.table-big .item .c4 .icon-poka.icon-right{ margin-right: -25px; transform: rotate(180deg); }
+
+.aff-single-widget-xl .widget-text .icon-poka{ left: auto; right: -65px; transform: rotate(180deg); }
+.aff-single-widget-big h4{ text-align: right; }
+.aff-single-widget-big p{ text-align: right; }
+
+.btn--read-more .icon-poka{ margin-right: 15px; transform: rotate(180deg); }
+
+.news-list-sidebar .news-sidebar-group .item img { float: right; }
+.news-list-sidebar .news-sidebar-group .item .text{ padding-left: 0; padding-right: 20px; }

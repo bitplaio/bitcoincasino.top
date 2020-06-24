@@ -1,0 +1,165 @@
+// -----------------------------------------------------------------------------
+// This file contains Sass mixins.
+// -----------------------------------------------------------------------------
+
+/*
+	Description:
+	Set a rem font size with pixel fallback
+	Useage:
+	element{
+		@include font-size(16px)
+	}
+*/
+@mixin font-size($font-size){
+    font-size:$font-size;
+    font-size:($font-size / $font-size-dafault)*1rem;
+}
+
+
+/*
+	Description:
+	Set placeholder color to inputs
+	Useage:
+	element{
+		@placeholder-color(#cccccc)
+	}
+*/
+@mixin placeholder-color($color){
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $color;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $color;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $color;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $color;
+    }
+
+}
+
+
+/*
+	Description:
+	Prefix Animations and keyframes
+	Useage:
+	@include keyframes(fade-out) {
+	  	0% { opacity: 1; }
+	  	100% { opacity: 0; }
+	}
+	element{
+	 	@include animation('5s fade-out 3');
+	}
+*/
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  	-webkit-animation: #{$str};
+ 	-moz-animation: #{$str};
+  	-ms-animation: #{$str};
+  	-o-animation: #{$str};
+  	animation: #{$str};
+}
+
+
+/*
+    Mixin transition prefix
+
+*/
+@mixin transition($str) {
+  	-webkit-transition: #{$str};
+ 	-moz-transition: #{$str};
+  	-ms-transition: #{$str};
+  	-o-transition: #{$str};
+  	transition: #{$str};
+}
+
+/*
+    Mixin transfrorm
+*/
+@mixin transform($str) {
+  	-webkit-transform: #{$str};
+ 	-moz-transform: #{$str};
+  	-ms-transform: #{$str};
+  	-o-transform: #{$str};
+  	transform: #{$str};
+}
+
+
+/*
+	Description:
+	Vendor-prefixed CSS
+	from https://github.com/HugoGiraudel/sass-boilerplate
+	Useage:
+	@include vendor(border-radius, 4px);
+*/
+@mixin vendor($property, $value...){
+    -webkit-#{$property}:$value;
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+            #{$property}:$value;
+}
+
+
+/*
+	Description:
+	Cross browser opacity
+	Useage:
+	@include opacity(0.8);
+*/
+@mixin opacity($opacity) {
+  	opacity: $opacity;
+  	$opacity-ie: $opacity * 100;
+  	filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
+/*
+    Vertical align direct child
+*/
+@mixin vertical-align($align: middle) {
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: $align;
+  }
+  & > * {
+    vertical-align: $align;
+  }
+}
+
+
+/*
+    Equal columns with flebox
+*/
+@mixin eqcols() {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    -js-display: flex;
+    & > .fcol {
+        flex: 1;
+    }
+}
