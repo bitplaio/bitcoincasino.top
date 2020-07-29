@@ -46,7 +46,7 @@
                 <div class="footer-copyright">
                     <div class="container">
                         <p><?php the_field('footer_copyright_text','options'); ?></p>
-                        <a href="#" class="btn btn-backToTop"><i class="icon-poka icon-poka-arrow-up"></i></a>
+                        <a href="#" class="btn btn-backToTop" aria-label="Back to top"><i class="icon-poka icon-poka-arrow-up"></i></a>
                     </div>
                     <!-- /.container -->
                 </div>
@@ -68,7 +68,7 @@
             ga('create','<?php the_field('google_analytics_code','options'); ?>','auto');ga('send','pageview');
         </script>
         <!-- hit.ua -->
-        <a href='http://hit.ua/?x=40521' target='_blank'>
+        <a href='http://hit.ua/?x=40521' target='_blank' rel='noreferrer'>
         <script language="javascript" type="text/javascript"><!--
         Cd=document;Cr="&"+Math.random();Cp="&s=1";
         Cd.cookie="b=b";if(Cd.cookie)Cp+="&c=1";
