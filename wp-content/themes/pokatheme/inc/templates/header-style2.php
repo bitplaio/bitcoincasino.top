@@ -1,7 +1,7 @@
 <?php
 $background_image = '';
 if( get_field('header_background' , 'options') ) {
-    $background_image = get_field('header_background' , 'options'); 
+    $background_image = get_field('header_background' , 'options');
 }
 
 if( ( is_single() || is_page() ) && get_field('header_backgound_image_override') ) {
@@ -55,22 +55,4 @@ if( ( is_single() || is_page() ) && get_field('header_backgound_image_override')
         <!-- /.container -->
     </div>
     <!-- /.head-logo -->
-    <div class="head-menu clearfix">
-        <div class="container">
-            <a href="#mobile-menu" class="trigger-mmenu hidden-lg-up">
-                <div class="icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <span><?php _e( 'Menu', 'poka' ); ?></span>
-            </a>
-            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'menu hidden-md-down', 'container' => false ) ); ?>
-            <nav id="mobile-menu">
-                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'mobmenu', 'container' => false ) ); ?>
-            </nav>
-        </div>
-        <!-- /.container -->
-    </div>
-    <!-- /#menu -->
 </header>
